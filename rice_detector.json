@@ -1,12 +1,13 @@
 {
-  "version": "rice-pour-detector-logreg-v0.2",
+  "version": "rice-pour-detector-logreg-v0.3",
   "threshold": 0.35,
-  "positive_examples": 223,
+  "positive_examples": 164,
   "background_negative_examples": 140,
-  "explicit_hard_negative_examples": 40,
+  "explicit_hard_negative_examples": 118,
   "hard_negative_sessions": {
     "20260921_192354": 11,
-    "20260921_194008": 29
+    "20260921_194008": 29,
+    "20260921_195940": 78
   },
   "feature_names": [
     "duration_s",
@@ -57,32 +58,29 @@
     0.1015272301810099
   ],
   "coef": [
-    -0.6328276209076348,
-    -0.1224961938878459,
-    1.1524066225023273,
-    -0.16075527753853716,
-    0.7206020737526274,
-    2.3447585662133608,
-    0.7728906629293878,
-    -1.8816755142813302,
-    -0.20052067666079465,
-    0.15683654650821366,
-    -0.42871630614975204,
-    -1.2967249724390202,
-    0.3175730125805328,
-    1.0573233544081142
+    0.6434959545630589,
+    -2.7118190266744877,
+    1.3172228704635307,
+    0.9929924486412173,
+    -1.1633439588045709,
+    3.795009803041127,
+    2.104642703740083,
+    -3.7401776598337317,
+    -1.4831343999945812,
+    1.1981331470153596,
+    -0.8770573990488914,
+    -0.3184193726612396,
+    1.4884725483160917,
+    0.34444213976657084
   ],
-  "intercept": 1.674562846971206,
-  "grouped_cv_at_threshold": {
-    "auc": 0.9749377179870453,
-    "sensitivity": 0.9103139013452914,
-    "specificity": 0.95
-  },
-  "new_hard_negative_session": {
-    "examples": 29,
-    "old_model_mean_probability": 0.02895179126633851,
-    "old_model_max_probability": 0.10984941482869039,
-    "new_model_mean_probability": 0.02251763587950657,
-    "new_model_max_probability": 0.12325813352525143
+  "intercept": 2.1286705263927512,
+  "training_note": "v0.3 regularized update from v0.2 using 162 bootstrap positive feature vectors, 2 new confirmed real events, and 118 explicit hard negatives; standardization retained from v0.2.",
+  "evaluation": {
+    "bootstrap_positive_sensitivity_at_0_35": 0.9753086419753086,
+    "new_confirmed_positive_sensitivity_at_0_35": 1,
+    "explicit_negative_specificity_at_0_35": 0.9576271186440678,
+    "new_session_negative_specificity_at_0_35": 0.9358974358974359,
+    "new_session_negative_mean_probability": 0.088524192504493,
+    "new_session_negative_max_probability": 0.811353069751576
   }
 }
